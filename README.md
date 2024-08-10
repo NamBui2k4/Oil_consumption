@@ -5,11 +5,11 @@
 
 # ➢ Abstract
 
-This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022.
+The project is a report conducted with the insights of a student. Oil consumption trend is one of most traditional time series problem.
 
-Also, the project also using techniques related to RNN to predict the oil consumption trend on the next year (2023). This newbie project is conducted as a report conducted with the insights of a student.
+This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022. Also, a technique related to RNN is used to predict the trend on the next year (2023).
 
-# Oil consumption dataset
+# ➢ dataset
 
 The dataset includes data points for various countries or entities, detailing both the quantities of proven oil reserves and annual oil consumption measured in terawatt-hours (TWh) or equivalent units.
 
@@ -20,32 +20,71 @@ Key info:
 - Num of index: 59 - years from 1965 to 2023
 - memory usage: 48.4+ KB
 
-# ➢ I. Introduction
+# ➢ I. Analyzing
 
-The trend of oil consumption from 1965 to 2023 shows significant growth, with some fluctuations due to economic and geopolitical events. Understanding the trends helps governments and businesses forecast future energy needs
-
---t0 be continue--
-<!--
- **Exploratory Analysis:** 
+The trend of oil consumption from 1965 to 2023 shows significant growth, with some fluctuations due to economic and geopolitical events. Understanding the trends helps governments and businesses forecast future energy needs. 
  
-  1.
-  2. Type of locations where crimes happen the most 
-  3. Timelapse of crimes hotspots over the years (2010 - 2019)
-  4. A brief literal sense about those crimes
+**1. Explore a sample**
+
+It takes too many effort to keep tracking all of 104 countries so lets pick random sample to for observation. 
+
+We could start with first 5 countries below:
+
+| <br/>Entity | count<br/> | unique<br/> | top<br/> | freq<br/> |
+| :--- | :--- | :--- | :--- | :--- |
+| Africa | 59.0 | 59.0 | 342.133700 | 1.0 |
+| Africa \(EI\) | 59.0 | 59.0 | 342.133700 | 1.0 |
+| Algeria | 59.0 | 59.0 | 15.405252 | 1.0 |
+| Argentina | 59.0 | 59.0 | 275.215900 | 1.0 |
+| Asia | 59.0 | 59.0 | 2249.215000 | 1.0 |
+
+Visualization:
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/945f1772-a8d7-4062-99f5-60a7c8e0a2d0" width="600" margin="120"/></td>
+    <td><img src="https://github.com/user-attachments/assets/50ee82e8-c269-4675-9de0-5f34734361f5" width="600"/></td>
+  </tr>
+</table>
+
+Now, going to the bottom of dataset, lets take a look at the last sample:
+
+| <br/>Entity | count<br/> | unique<br/> | top<br/> | freq<br/> |
+| :--- | :--- | :--- | :--- | :--- |
+| Uzbekistan | 39.0 | 39.0 | 121.316246 | 1.0 |
+| Venezuela | 59.0 | 59.0 | 112.023760 | 1.0 |
+| Vietnam | 59.0 | 59.0 | 18.011540 | 1.0 |
+| Western Africa \(EI\) | 59.0 | 59.0 | 49.667866 | 1.0 |
+
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/55b07131-ca53-412d-9b51-a6147ac9c776" width="600" margin="120"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ac83b885-dbac-4714-a782-7736b0d36086" width="600"/></td>
+  </tr>
+</table>
+
+It seems that Asia has the most numerous consumption in the sample
+
+**2. Check missing value**
+
+ <img src="https://github.com/user-attachments/assets/c6c14827-be17-42b6-8476-55230df3e4f5" width="1000" position="relative" align-items="center" display="flex"/>
+
+
+
+3. 
+
+  4. Type of locations where crimes happen the most 
+  5. Timelapse of crimes hotspots over the years (2010 - 2019)
+  6. A brief literal sense about those crimes
   
  **Predictive Analysis:**
  
   1. Predicting the type of crime(s) and probability of crimes based on location.
   2. Predicting the type of crime(s) based on Time and also on other parameters.
 
-**Related Work:** 
-Many literatures are trying to predict the crimes. Sunil Yadav et al M. Timbadia is using supervised, semi-supervised and unsupervised learning techniques to predict the crime in India, including Apriori Algorithm, Naive Bayes Algorithm and regression algorithm [1]. Romika Yadav and S. Kumari Sheoran came up with auto regression techniques for time series data where she is trying to improve the accuracy of prediction by identifying the relationship among crime attributes [2]. B.Sivanagaleela and S. Rajesh  is using a fuzzy C-means algorithm, but he only focuses on where the crime will occur and doesn’t care about the type of the crimes [3].
 
-**References:**
 
-  1. S. Yadav, M. Timbadia, A. Yadav, R. Vishwakarma and N. Yadav, "Crime pattern detection, analysis & prediction," 2017 International conference of Electronics, Communication and Aerospace Technology (ICECA), Coimbatore, 2017, pp. 225-230.
-  2. R. Yadav and S. Kumari Sheoran, "Crime Prediction Using Auto Regression Techniques for Time Series Data," 2018 3rd International Conference and Workshops on Recent Advances and Innovations in Engineering (ICRAIE), Jaipur, India, 2018, pp. 1-5.
-  3. B. Sivanagaleela and S. Rajesh, "Crime Analysis and Prediction Using Fuzzy C-Means Algorithm," 2019 3rd International Conference on Trends in Electronics and Informatics (ICOEI), Tirunelveli, India, 2019, pp. 595-599.
   
 
 # ➢ II. Materials and Methods
