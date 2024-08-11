@@ -3,13 +3,13 @@
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
 
-# ➢ Abstract
+# ➢ I. Abstract
 
 The project is a report conducted with the insights of a student. Oil consumption trend is one of most traditional time series problem.
 
-This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022. Also, a technique related to RNN is used to predict the trend on the next year (2023).
+This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022. Also, a technique related to RNN is used to predict the trend on the next year (2024).
 
-# ➢ dataset
+# ➢ II. Materials
 
 The dataset includes data points for various countries or entities, detailing both the quantities of proven oil reserves and annual oil consumption measured in terawatt-hours (TWh) or equivalent units.
 
@@ -20,16 +20,23 @@ Key info:
 - Num of index: 59 - years from 1965 to 2023
 - memory usage: 48.4+ KB
 
-# ➢ I. Analyzing
+# ➢ III. Exploration Analysis
 
 The trend of oil consumption from 1965 to 2023 shows significant growth, with some fluctuations due to economic and geopolitical events. Understanding the trends helps governments and businesses forecast future energy needs. 
- 
+
+In this step, we inferred useful information and analyzed important trends for crime detection and   prevention. The analysis will also help identify useful features for building predictive models.
+
+   - *Methods*: Bar graph, line graph, pie-chart, statistic.
+  
+   - *Technologies*:  pandas, Matplotlib, Folium, Tableau. 
+
 **1. Explore a sample**
 
 It takes too many effort to keep tracking all of 104 countries so lets pick random sample to for observation. 
 
-We could start with first 5 countries below:
-
+We could start with first 5 countries below: <br /><br />
+<div align="center">
+	
 | <br/>Entity | count<br/> | unique<br/> | top<br/> | freq<br/> |
 | :--- | :--- | :--- | :--- | :--- |
 | Africa | 59.0 | 59.0 | 342.133700 | 1.0 |
@@ -37,36 +44,38 @@ We could start with first 5 countries below:
 | Algeria | 59.0 | 59.0 | 15.405252 | 1.0 |
 | Argentina | 59.0 | 59.0 | 275.215900 | 1.0 |
 | Asia | 59.0 | 59.0 | 2249.215000 | 1.0 |
-
-Visualization:
+	
+</div><br />
 
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/945f1772-a8d7-4062-99f5-60a7c8e0a2d0" width="600" margin="120"/></td>
     <td><img src="https://github.com/user-attachments/assets/50ee82e8-c269-4675-9de0-5f34734361f5" width="600"/></td>
   </tr>
-</table>
+</table><br />
 
-Now, going to the bottom of dataset, lets take a look at the last sample:
+Now, going to the bottom of dataset, lets take a look at the last 5 countries:<br /><br />
 
+<div align="center">
+	
 | <br/>Entity | count<br/> | unique<br/> | top<br/> | freq<br/> |
 | :--- | :--- | :--- | :--- | :--- |
 | Uzbekistan | 39.0 | 39.0 | 121.316246 | 1.0 |
 | Venezuela | 59.0 | 59.0 | 112.023760 | 1.0 |
 | Vietnam | 59.0 | 59.0 | 18.011540 | 1.0 |
 | Western Africa \(EI\) | 59.0 | 59.0 | 49.667866 | 1.0 |
-
+</div><br />
 
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/55b07131-ca53-412d-9b51-a6147ac9c776" width="600" margin="120"/></td>
     <td><img src="https://github.com/user-attachments/assets/ac83b885-dbac-4714-a782-7736b0d36086" width="600"/></td>
   </tr>
-</table>
+</table><br />
 
-It seems that Asia has the most numerous consumption in the sample
+It seems that Asia has the most numerous consumption in the sample<br />
 
-**2. Check missing value**
+**2. Check missing value**<br />
 
 <table>
   <div>
@@ -76,9 +85,9 @@ It seems that Asia has the most numerous consumption in the sample
 
 As the above figure shown, almost missing values appear from 1965 to 1985. This could be due to several historical and contextual factors such as Economic and Political Stability, Technological Limitations, or Data Infrastructure.
 
-3. Analyze top nations
+**3. Analyze top nations**
 
-After investigation top nations which possess highest oil consumption values, fifteen typical familiar countries were chosen to analyze:
+After investigation nations which possess highest oil consumption values, fifteen typical familiar nations among of them were chosen to analyze:
 
 ```python
 [
@@ -99,18 +108,31 @@ After investigation top nations which possess highest oil consumption values, fi
 ]
 ```
 
-Here is what we see:
+Here is what we see:<br />
 
 <table>
   <div>
     <td><img src="https://github.com/user-attachments/assets/324fddd6-0e1e-42d5-96a1-8a95811e597f"/></td>
   </div>
+</table><br />
+
+The period from 1965 to 2022 witness a significant increase of USA's consumption compared to others, although there were few fluctuation.<br />
+
+That is a such numerous figure, we can prove that by checking the proportion of USA's consumption compared to the World.<br />
+
+**4. Proportion of USA**<br /><br />
+
+<table>
+  <div>
+    <td><img src="https://github.com/user-attachments/assets/1ad5cc96-b2ac-452a-9e75-75a3fb362558"/></td>
+  </div>
 </table>
 
 
-  5. Type of locations where crimes happen the most 
-  6. Timelapse of crimes hotspots over the years (2010 - 2019)
-  7. A brief literal sense about those crimes
+
+6. 
+  7. Timelapse of crimes hotspots over the years (2010 - 2019)
+  8. A brief literal sense about those crimes
   
  **Predictive Analysis:**
  
@@ -121,9 +143,8 @@ Here is what we see:
 
   
 
-# ➢ II. Materials and Methods
 
-**Dataset**
+
 
 The dataset chosen for this project consists of incidents of crime reported in the city of Chicago from 2001 to 2019. Data is extracted from the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. It is one of the richest data sources in the area of crime. 
 The dataset includes enough information about Date, Type, Description, location etc about the crime for our analysis.
