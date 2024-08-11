@@ -68,15 +68,49 @@ It seems that Asia has the most numerous consumption in the sample
 
 **2. Check missing value**
 
- <img src="https://github.com/user-attachments/assets/c6c14827-be17-42b6-8476-55230df3e4f5" width="1000" position="relative" align-items="center" display="flex"/>
+<table>
+  <div>
+    <td><img src="https://github.com/user-attachments/assets/c6c14827-be17-42b6-8476-55230df3e4f5"/></td>
+  </div>
+</table>
+
+As the above figure shown, almost missing values appear from 1965 to 1985. This could be due to several historical and contextual factors such as Economic and Political Stability, Technological Limitations, or Data Infrastructure.
+
+3. Analyze top nations
+
+After investigation top nations which possess highest oil consumption values, fifteen typical familiar countries were chosen to analyze:
+
+```python
+[
+ 'United States',
+ 'China',
+ 'India',
+ 'Russia',
+ 'Japan',
+ 'South Korea',
+ 'Brazil',
+ 'Canada',
+ 'Singapore',
+ 'France',
+ 'United Kingdom',
+ 'Spain',
+'Italy',
+ 'Thailand',
+]
+```
+
+Here is what we see:
+
+<table>
+  <div>
+    <td><img src="https://github.com/user-attachments/assets/324fddd6-0e1e-42d5-96a1-8a95811e597f"/></td>
+  </div>
+</table>
 
 
-
-3. 
-
-  4. Type of locations where crimes happen the most 
-  5. Timelapse of crimes hotspots over the years (2010 - 2019)
-  6. A brief literal sense about those crimes
+  5. Type of locations where crimes happen the most 
+  6. Timelapse of crimes hotspots over the years (2010 - 2019)
+  7. A brief literal sense about those crimes
   
  **Predictive Analysis:**
  
