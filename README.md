@@ -144,9 +144,10 @@ This makes USA become leader of eight countries cosuming most oil in the world.
 
 <table>
   <div>
-    <td><img src="https://github.com/user-attachments/assets/c79579bc-4304-47bd-b586-30906a7b06ae"/></td>
+    <td><img src="https://github.com/user-attachments/assets/b56bbabe-e45e-440b-b233-01412b5ec9d7"/></td>
   </div>
 </table>
+
 
 The above figure shows that Asia reach to highest point of 25000. With rapid economic development and a large population, the demand for oil in this area increase day by day. According to a report by the International Energy Agency (IEA), the Asia-Pacific region accounts for about 34% of total global oil demand 
 
