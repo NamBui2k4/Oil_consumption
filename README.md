@@ -9,13 +9,20 @@ The project is a report conducted with the insights of a student. Oil consumptio
 
 This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022. Also, a technique related to RNN is used to predict the trend on the next year (2024).
 
-# ➢ II. Materials
+# ➢ II. Dataset
 
-The dataset includes data points for various countries or entities, detailing both the quantities of proven oil reserves and annual oil consumption measured in terawatt-hours (TWh) or equivalent units.
+The dataset chosen for this project includes data points for various countries or entities, detailing both the quantities of proven oil reserves and annual oil consumption measured in terawatt-hours (TWh) or equivalent units. Data is extracted from National Energy Departments and International Organizations such as the International Energy Agency (IEA), Organization of the Petroleum Exporting Countries (OPEC), and the United Nations.
+
 
 Link: [kaggle](https://www.kaggle.com/datasets/muhammadroshaanriaz/oil-reserves-and-consumption-from-1995-to-2022)
 
-Key info:
+Key features:
+- Entity: Names of countries or regions included in the dataset.
+- Year: Time period ranging from 1995 to 2022, capturing annual data points.
+- Oil Reserves: Quantities of proven oil reserves, typically measured in barrels or metric tons, reflecting the estimated amount of economically recoverable oil.
+- Oil Consumption (TWh): Annual oil consumption represented in terawatt-hours (TWh) or equivalent units, indicating the amount of oil utilized for various energy needs including transportation, industrial processes, and residential use.
+
+More info:
 - Num of column: 104 - country names
 - Num of index: 59 - years from 1965 to 2023
 - memory usage: 48.4+ KB
@@ -116,47 +123,45 @@ Here is what we see:<br />
   </div>
 </table><br />
 
-The period from 1965 to 2022 witness a significant increase of USA's consumption compared to others, although there were few fluctuation.<br />
+The period from 1965 to 2022 witness a significant increase of USA's consumption following by China. This can be obviously undertanded because United State consumes about 19 millions barrels of oil per day while this number of China is 14 millions. Those number are extremely high for development countries<br />
 
-That is a such numerous figure, we can prove that by checking the proportion of USA's consumption compared to the World.<br />
+Although there were few fluctuation, that is still a such numerous number for USA, we can prove that by checking the proportion of USA's consumption compared to the World.<br />
 
 **4. Proportion of USA**<br /><br />
 
 <table>
   <div>
-    <td><img src="https://github.com/user-attachments/assets/1ad5cc96-b2ac-452a-9e75-75a3fb362558"/></td>
+    <td><img src="https://github.com/user-attachments/assets/82c8c4b9-1749-4fb6-97f4-b2c54780743c"/></td>
   </div>
 </table>
 
 
+As we see, the USA'consumption take part in almost 20% of the World. The trends was recorded until 2023. 
 
-6. 
-  7. Timelapse of crimes hotspots over the years (2010 - 2019)
-  8. A brief literal sense about those crimes
-  
- **Predictive Analysis:**
- 
-  1. Predicting the type of crime(s) and probability of crimes based on location.
-  2. Predicting the type of crime(s) based on Time and also on other parameters.
+This makes USA become leader of eight countries cosuming most oil in the world.
 
+6. Analyze data group by Continents
 
+<table>
+  <div>
+    <td><img src="https://github.com/user-attachments/assets/c79579bc-4304-47bd-b586-30906a7b06ae"/></td>
+  </div>
+</table>
 
-  
+The above figure shows that Asia reach to highest point of 25000. With rapid economic development and a large population, the demand for oil in this area increase day by day. According to a report by the International Energy Agency (IEA), the Asia-Pacific region accounts for about 34% of total global oil demand 
 
+In the opposite direction, Africa's consumption seems to not over 2500. Africa is not the world's least oil-consuming region, but its oil consumption is much lower than other regions such as Asia and North America.
 
+# ➢ IV. Predicting
 
-
-The dataset chosen for this project consists of incidents of crime reported in the city of Chicago from 2001 to 2019. Data is extracted from the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. It is one of the richest data sources in the area of crime. 
-The dataset includes enough information about Date, Type, Description, location etc about the crime for our analysis.
  
 **Approach and corresponding technologies**
 
-The dataset contains 7 million records of the crime. Data of this size needs fast and efficient data processing. We have used Spark framework as its in-memory processing capability makes it easy to deal with data of this volume. We have implemented some techniques such as: k-fold cross validation, KNN, Random Forest, ensemble method and feature selection.
 
 Below is the pipeline we followed:
 
   1. **Data Pre-processing:** In this step we chose data from year 2010-2019 as the accuracy stabilized for this time period. 
-      -  Dropped missing/null values as it accounted for <1% of data. 
+      -  Dropped missing/null values.
       -  Filtered out irrelevant features from the dataset. 
       -  Reduced/merged number of crime types from 32 to 16.
       -  Used Random Over sampling/Under sampling techniques to balance the data.
