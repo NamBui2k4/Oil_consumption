@@ -1,4 +1,4 @@
-# Project: Analyzing and Predicting Oil consumption in many countries
+![image](https://github.com/user-attachments/assets/d1506ba6-b8d9-4f47-8854-1dfc2f340a87)# Project: Analyzing and Predicting Oil consumption in many countries
 
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
@@ -26,6 +26,11 @@ More info:
 - Num of column: 104 - country names
 - Num of index: 59 - years from 1965 to 2023
 - memory usage: 48.4+ KB
+
+  A Sample of data:
+
+  ![image](https://github.com/user-attachments/assets/0518bd85-0c7e-4f20-b9b6-0e7abcad597f)
+
 
 ## ➢ III. Exploration Analysis
 
