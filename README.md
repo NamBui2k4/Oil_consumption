@@ -3,13 +3,13 @@
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
 
-# ➢ I. Abstract
+## ➢ I. Abstract
 
 The project is a report conducted with the insights of a student. Oil consumption trend is one of most traditional time series problem.
 
 This project analyzes global oil consumption trends from oil consumption dataset, which spanning from 1995 to 2022. Also, a technique related to RNN is used to predict the trend on the next year (2024).
 
-# ➢ II. Dataset
+## ➢ II. Dataset
 
 The dataset chosen for this project includes data points for various countries or entities, detailing both the quantities of proven oil reserves and annual oil consumption measured in terawatt-hours (TWh) or equivalent units. Data is extracted from National Energy Departments and International Organizations such as the International Energy Agency (IEA), Organization of the Petroleum Exporting Countries (OPEC), and the United Nations.
 
@@ -27,7 +27,7 @@ More info:
 - Num of index: 59 - years from 1965 to 2023
 - memory usage: 48.4+ KB
 
-# ➢ III. Exploration Analysis
+## ➢ III. Exploration Analysis
 
 The trend of oil consumption from 1965 to 2023 shows significant growth, with some fluctuations due to economic and geopolitical events. Understanding the trends helps governments and businesses forecast future energy needs. 
 
@@ -153,7 +153,7 @@ The above figure shows that Asia reach to highest point of 25000. With rapid eco
 
 In the opposite direction, Africa's consumption seems to not over 2500. Africa is not the world's least oil-consuming region, but its oil consumption is much lower than other regions such as Asia and North America.
 
-# ➢ IV. Predicting
+## ➢ IV. Predicting
 
  
 **Approach and corresponding technologies**
@@ -191,7 +191,7 @@ Below is the pipeline we followed:
 
      
  
-# ➢ III. Results
+## ➢ III. Results
 
  <h3><pre>1. Important Preprocessing Steps</pre></h3>
 
@@ -313,7 +313,7 @@ Individual accuracy:
 KNN (OverSampling) provides the best results. 
 
 
-# ➢ IV. Discussion
+## ➢ IV. Discussion
 
 **Relevance of solution**:
 - Machine Learning models are as good or as bad as the data you have. Correlation between features is important for predictions. In our case, we experienced low correlation features with our predicting variable. We experimented with different features in order to get better predictions such as using week/month/year to predict crime type based on time and using additional features such as location description, arrest. The results became better, however, not significant enough. 
