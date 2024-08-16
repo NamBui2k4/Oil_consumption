@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d1506ba6-b8d9-4f47-8854-1dfc2f340a87)# Project: Analyzing and Predicting Oil consumption in many countries
+# Mini machine learning project: Analyzing and Predicting Oil consumption in many countries
 
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
@@ -38,11 +38,11 @@ The trend of oil consumption from 1965 to 2023 shows significant growth, with so
 
 In this step, we inferred useful information and analyzed important trends for crime detection and   prevention. The analysis will also help identify useful features for building predictive models.
 
-   - *Methods*: Bar graph, line graph, pie-chart, statistic.
+   - *Methods*: Bar graph, line graph, pie-chart, area graph, statistic, sampling.
   
-   - *Technologies*:  pandas, Matplotlib, Folium, Tableau. 
+   - *Technologies*:  pandas, Matplotlib, numpy. 
 
-**1. Explore a sample**
+**1. Statistic**
 
 It takes too many effort to keep tracking all of 104 countries so lets pick random sample to for observation. 
 
@@ -163,28 +163,36 @@ In the opposite direction, Africa's consumption seems to not over 2500. Africa i
  
 **Approach and corresponding technologies**
 
+This is timne series problem. Therefor, we consider each country as an input data to put into machine learning model. The output is value of oil consumption in 2024. 
 
 Below is the pipeline we followed:
 
-  1. **Data Pre-processing:** In this step we chose data from year 2010-2019 as the accuracy stabilized for this time period. 
-      -  Dropped missing/null values.
-      -  Filtered out irrelevant features from the dataset. 
-      -  Reduced/merged number of crime types from 32 to 16.
-      -  Used Random Over sampling/Under sampling techniques to balance the data.
-      
-     *Technologies*: Apache Spark, pyspark Dataframe.
+1. **Data Pre-processing:**: 
+      -  Normalize the data
+      -  Create recursive data for a country
+      -  Dropped missing/null values of recursive data.
 
+In the second stage, We need to decide how many timesteps that an input has. If we have `n` timesteps, the recursive data will have `n + 1` features.
 
-2. **Exploration Analysis:** In this step, we inferred useful information and analyzed important trends for crime detection and   prevention. The analysis will also help identify useful features for building predictive models.
+For example, lets take Uzbekistan into account and the timesteps is 5. Here is a sample of result:
+```
+Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekistan 6
+1985    121.316246     123.9132    125.95903    130.77919    132.45718    130.16013
+1986      123.9132    125.95903    130.77919    132.45718    130.16013    123.54609
+1987     125.95903    130.77919    132.45718    130.16013    123.54609     98.57593
+1988     130.77919    132.45718    130.16013    123.54609     98.57593     87.02526
+1989     132.45718    130.16013    123.54609     98.57593     87.02526       75.798
+```
 
-   *Methods*: Bar graph, line graph, pie-chart, heatmaps, querying data.
+ 2. **Predicting**
+
+   *Methods*: random split, k-Fold Cross-Validation.
   
    *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Folium, Tableau. 
 
 
-3. **Predictive Analysis:** Below predictions were tried on both KNN and Random Forest and the results were compared with each other.  Below are the steps involved: 
-    -  We used random split, k-Fold Cross-Validation technique while training.
-    -  We further trained the model with additional features such as Location Description, Arrest etc. to achieve better accuracy.
+4. **Predictive Analysis:** Below predictions were tried on both KNN and Random Forest and the results were compared with each other.  Below are the steps involved: 
+
     -  We transformed categorical data to binary vectors using One Hot Vector/ Label Encoding.
     -  Used ExtraTreesClassifier, Correlation Matrix/HeatMap, Principal Component Analysis (PCA) as feature selection techniques.
     -  Tuned the hyperparameters such as no of neighbors in KNN and no of trees in Random Forest.
