@@ -174,16 +174,6 @@ Below is the pipeline we followed:
 
 In the second stage, We need to decide how many timesteps that an input has. If we have `n` timesteps, the recursive data will have `n + 1` features.
 
-For example, lets take Uzbekistan into account and the timesteps is 5. Here is a sample of result:
-```
-Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekistan 6
-1985    121.316246     123.9132    125.95903    130.77919    132.45718    130.16013
-1986      123.9132    125.95903    130.77919    132.45718    130.16013    123.54609
-1987     125.95903    130.77919    132.45718    130.16013    123.54609     98.57593
-1988     130.77919    132.45718    130.16013    123.54609     98.57593     87.02526
-1989     132.45718    130.16013    123.54609     98.57593     87.02526       75.798
-```
-
  2. **Predicting**
 
    *Methods*: k-Fold Cross-Validation, using linear models.
@@ -192,8 +182,54 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
    - Linear regression with Stochastic griadient descent
    - Random forest
    *Technologies*:  GridSearchCV, scikit-learn. 
+****
 
-<h3><pre>2. Linear Regression </pre></h3>
+**For example**
+
+Lets take Uzbekistan into account.The timesteps to split data is 5. 
+
+Here is a result of preprocessing:
+<br>
+
+```
+Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekistan 6
+1985    121.316246     123.9132    125.95903    130.77919    132.45718    130.16013
+1986      123.9132    125.95903    130.77919    132.45718    130.16013    123.54609
+1987     125.95903    130.77919    132.45718    130.16013    123.54609     98.57593
+1988     130.77919    132.45718    130.16013    123.54609     98.57593     87.02526
+1989     132.45718    130.16013    123.54609     98.57593     87.02526       75.798
+....	..........    .........	   .........	........      .......	     ......
+
+- train-size: 0.8
+- test-size: 0.2
+
+```
+<h3><pre>1. Linear Regression </pre></h3>
+<br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/057b416c-c962-4e08-a69d-092d2bf0875d" height="300"/>
+    </td>
+    <td>
+
+	Actual: 49.598866, Predicted: 53.888488217568664 
+
+	Actual: 56.866768, Predicted: 53.822199973679346
+
+	Actual: 58.118244, Predicted: 52.79624932173364
+
+	Actual: 62.331253, Predicted: 61.7337395190528
+
+	Actual: 61.463074, Predicted: 59.8863215843685
+
+	Actual: 61.494442, Predicted: 60.97227165464203
+
+	Actual: 61.651016, Predicted: 58.23722435648358
+ 
+</td>
+  </tr>
+</table>
 
  <h3><pre>2. SGDRegressor </pre></h3>
 
@@ -202,11 +238,11 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="400"/>
+      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="300"/>
     </td>
     <td>
 
-        Actual: 49.598866, Predicted: 47.92200014026671 
+	Actual: 49.598866, Predicted: 47.92200014026671 
       
 	Actual: 56.866768, Predicted: 48.396909509244225
 
@@ -228,7 +264,7 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/23fc1ce7-b174-41a6-90b7-83d884a4fd42" height="400"/>
+      <img src="https://github.com/user-attachments/assets/23fc1ce7-b174-41a6-90b7-83d884a4fd42" height="300"/>
     </td>
     <td>
 
@@ -254,7 +290,7 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/a4f9df71-a170-41d2-ba87-73a82ae8f2a7" height="400"/>
+      <img src="https://github.com/user-attachments/assets/a4f9df71-a170-41d2-ba87-73a82ae8f2a7" height="300"/>
     </td>
     <td>
 
