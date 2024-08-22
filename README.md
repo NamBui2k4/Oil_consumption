@@ -1,4 +1,4 @@
-# Mini machine learning project: Analyzing and Predicting Oil consumption in many countries
+# Mini machine learning project: Analyzing and Creating model for Oil consumption in many countries
 
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
@@ -186,50 +186,95 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
 
  2. **Predicting**
 
-   *Methods*: random split, k-Fold Cross-Validation.
-  
-   *Technologies*:  pyspark DataFrame, pyspark SQL, pyspark RDD, Matplotlib, Folium, Tableau. 
+   *Methods*: k-Fold Cross-Validation, using linear models.
+   *Model:*
+   - Linear regression
+   - Linear regression with Stochastic griadient descent
+   - Random forest
+   *Technologies*:  GridSearchCV, scikit-learn. 
 
+<h3><pre>2. Linear Regression </pre></h3>
 
-4. **Predictive Analysis:** Below predictions were tried on both KNN and Random Forest and the results were compared with each other.  Below are the steps involved: 
+ <h3><pre>2. SGDRegressor </pre></h3>
 
-    -  We transformed categorical data to binary vectors using One Hot Vector/ Label Encoding.
-    -  Used ExtraTreesClassifier, Correlation Matrix/HeatMap, Principal Component Analysis (PCA) as feature selection techniques.
-    -  Tuned the hyperparameters such as no of neighbors in KNN and no of trees in Random Forest.
-    -  Used an ensemble of different classification models and used soft voting for output.
-    
-    3.1. **Predicting the type of crime (probabilities) based on its location**: We used latitude, longitude as location to predict the type of crime. We used vector assembler to transform two columns into a vector. 
+Our dataset was shuffle by k-fold cross validation. Therefore, the error could fluctuate slightly for each time re-run the program. 
+<br><br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="400"/>
+    </td>
+    <td>
 
-    3.2. **Predicting the crime based on time(week)**: We used week as a feature to predict the crime based on time. 
+        Actual: 49.598866, Predicted: 47.92200014026671 
+      
+	Actual: 56.866768, Predicted: 48.396909509244225
 
-     
- 
-## ➢ III. Results
+	Actual: 58.118244, Predicted: 51.95339062585486
 
- <h3><pre>1. Important Preprocessing Steps</pre></h3>
+	Actual: 62.331253, Predicted: 54.572809678080695
 
-- **Dataset Analysis** - Our dataset was quite imbalanced and had a lot of features. Therefore, we tried making it balanced by merging similar types or dropping insignificant ones. 
+	Actual: 61.463074, Predicted: 58.16951602310129
 
-<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/pie-comparison.png" height="400"/> 
+	Actual: 61.494442, Predicted: 58.62236298378685
 
-- **Feature Extraction** - 
-    1. Feature importance in Extra Tree Classifier
-    2. Principal Component Analysis 
-    3. Correlation Matrix/HeatMap.
+	Actual: 61.651016, Predicted: 58.649134441450144
+      
+</td>
+  </tr>
+</table>
+
+<br><br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/23fc1ce7-b174-41a6-90b7-83d884a4fd42" height="400"/>
+    </td>
+    <td>
+
+	Actual: 49.598866, Predicted: 48.50103901222711 
+
+	Actual: 56.866768, Predicted: 48.555096000599335
+
+	Actual: 58.118244, Predicted: 52.65167273752362
+
+	Actual: 62.331253, Predicted: 54.91206417534383
+
+	Actual: 61.463074, Predicted: 58.847247266365066
+
+	Actual: 61.494442, Predicted: 58.88107719637861
+
+	Actual: 61.651016, Predicted: 58.85958913207343
    
- **Correlation Matrix/HeatMap -** The heatmap and matrix help us decide features which are in high correlation with Primary Type crime.
+</td>
+  </tr>
+</table>
 
-<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/heatmap.png" width="350" height="210"/>  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/corelation.png" width="210" height="350"/> 
+<br><br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/a4f9df71-a170-41d2-ba87-73a82ae8f2a7" height="400"/>
+    </td>
+    <td>
 
+	Actual: 49.598866, Predicted: 45.55801172612378 
 
-<h3><pre>2. Exploratory Analysis: </pre></h3>
+	Actual: 56.866768, Predicted: 47.00702817317155
 
-<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image1.gif" width="700" height="360"/>
-		<p> Crime hotstops across the past decade</p>
+	Actual: 58.118244, Predicted: 48.73097188424087
 
-<img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/image8.png"> 
-		Trend of crime types across the past decade
+	Actual: 62.331253, Predicted: 52.800342186819314
 
+	Actual: 61.463074, Predicted: 54.81825252949285
+
+	Actual: 61.494442, Predicted: 56.77862919019464
+
+	Actual: 61.651016, Predicted: 56.88706482780992
+ 
+</td>
+  </tr>
+</table>
 
 
 <h3><pre>3. Predictive Analysis: </pre></h3>
