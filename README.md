@@ -1,4 +1,4 @@
-# Mini machine learning project: Analyzing and Creating model for Oil consumption in many countries
+# Machine learning: Analyzing and Creating model for Oil consumption in many countries
 
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
@@ -180,6 +180,7 @@ In the second stage, We need to decide how many timesteps that an input has. If 
    *Model:*
    - Linear regression
    - Linear regression with Stochastic griadient descent
+   - Decision Tree
    - Random forest
    *Technologies*:  GridSearchCV, scikit-learn. 
 ****
@@ -202,10 +203,13 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
 
 - train-size: 0.8
 - test-size: 0.2
-
+- shape: (34, 6)
 ```
 <h3><pre>1. Linear Regression </pre></h3>
 <br>
+With the such small size, simple machine learning model like linear regression is suitble.
+<br><br>
+
 <table>
   <tr>
     <td>
@@ -313,35 +317,21 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
 </table>
 
 
-<h3><pre>3. Predictive Analysis: </pre></h3>
+<h3><pre>3. Decision tree </pre></h3>
+
+
 
 **Predicting the type of crime(s) and probability of crimes based on location and time data:**
 
-| Prediction Model | Measure  | Location Data Based | Time Data Based |
-|------------------|----------|---------------------|-----------------|
-| Random Forest    | Accuracy | 26.33%              | 22.65%          |
-| Random Forest    | F1 Score | 17.58 %             | 8.37%           |
-| KNN              | Accuracy | 29.62%              | 27.7%           |
-| KNN              | F1 Score | 25.33%              | 21.2%           |
+| Prediction Model   | 	  MSE   | 
+|--------------------|----------|
+| Linear regression  | 		| 
+| SGD regression     | 	 	|
+| Decision tree      |  	| 
+| Random forest      |		|
 
 
-We concluded that location or time data alone donot provide sufficient details.
 
-**Predicting the type of crime(s) and probability of crimes based on both location and time data:**
-
-**Random Forest Classifier**
- 
- Grid-search and k-fold cross validation provided the best params for RF.
- 
- <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-grid.png">
- <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-parameters.png">
- 
-
- Results: 
- - Accuracy = 36.86%
- - F1 score = 25.42%
-          
- 
  Additionally providing crime probabilities.
  
  <img src="https://github.com/Vaibhav3M/Project-SOEN691-BigData-/blob/master/Exploratory%20Analysis/images/RF-prob.png">
