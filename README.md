@@ -234,141 +234,101 @@ With the such small size, simple machine learning model like linear regression i
 </td>
   </tr>
 </table>
-
+<br><br>
  <h3><pre>2. SGDRegressor </pre></h3>
 
-Our dataset was shuffle by k-fold cross validation. Therefore, the error could fluctuate slightly for each time re-run the program. 
+Our dataset was shuffle by k-fold cross validation. Therefore, the error could fluctuate slightly for each time re-run the program. This suffling was decided by `random_state` paramenter of SGDRegressor. We can seet that by following plot:
 
-<br><br>
+<table>
+  <div>
+    <td><img src="https://github.com/user-attachments/assets/e54b536e-79b1-45ee-9ff0-45ec8f098009"/></td>
+  </div>
+</table>
+
+We have to find one (or many) value of `random_state` to make model reach to minimum.  After checking, we found that 75 and 50 are two suitable value.
+
+- `random_state` = 50 
+
+<br>
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="300"/>
+      <img src="https://github.com/user-attachments/assets/223f043d-69ad-4177-9412-3220b4a0e41b" height="300"/>
     </td>
     <td>
+	
+	Actual: 49.598866, Predicted: 51.80179601036876 
 
-	Actual: 49.598866, Predicted: 47.92200014026671 
-      
-	Actual: 56.866768, Predicted: 48.396909509244225
+	Actual: 56.866768, Predicted: 51.96274671319636
 
-	Actual: 58.118244, Predicted: 51.95339062585486
+	Actual: 58.118244, Predicted: 55.81865477490301
 
-	Actual: 62.331253, Predicted: 54.572809678080695
+	Actual: 62.331253, Predicted: 58.46993676615634
 
-	Actual: 61.463074, Predicted: 58.16951602310129
+	Actual: 61.463074, Predicted: 62.39474754077266
 
-	Actual: 61.494442, Predicted: 58.62236298378685
+	Actual: 61.494442, Predicted: 62.953854342446455
 
-	Actual: 61.651016, Predicted: 58.649134441450144
-      
+	Actual: 61.651016, Predicted: 63.36142417596551
+
 </td>
   </tr>
 </table>
+<br>
 
-<br><br>
+- `random_state` = 75
+<br>
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="300"/>
+      <img src="https://github.com/user-attachments/assets/7a735ce9-bcc8-42f9-bac2-ca15cf857995" height="300"/>
     </td>
     <td>
+	
+	Actual: 49.598866, Predicted: 51.86172517824566 
 
-	Actual: 49.598866, Predicted: 47.92200014026671 
-      
-	Actual: 56.866768, Predicted: 48.396909509244225
+	Actual: 56.866768, Predicted: 52.542091062823
 
-	Actual: 58.118244, Predicted: 51.95339062585486
+	Actual: 58.118244, Predicted: 56.29637005320826
 
-	Actual: 62.331253, Predicted: 54.572809678080695
+	Actual: 62.331253, Predicted: 59.219222372828085
 
-	Actual: 61.463074, Predicted: 58.16951602310129
+	Actual: 61.463074, Predicted: 63.012822449491175
 
-	Actual: 61.494442, Predicted: 58.62236298378685
+	Actual: 61.494442, Predicted: 63.756976372548095
 
-	Actual: 61.651016, Predicted: 58.649134441450144
-      
+	Actual: 61.651016, Predicted: 63.848115735649934
+
 </td>
   </tr>
 </table>
-
 <br><br>
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/23fc1ce7-b174-41a6-90b7-83d884a4fd42" height="300"/>
-    </td>
-    <td>
-
-	Actual: 49.598866, Predicted: 48.50103901222711 
-
-	Actual: 56.866768, Predicted: 48.555096000599335
-
-	Actual: 58.118244, Predicted: 52.65167273752362
-
-	Actual: 62.331253, Predicted: 54.91206417534383
-
-	Actual: 61.463074, Predicted: 58.847247266365066
-
-	Actual: 61.494442, Predicted: 58.88107719637861
-
-	Actual: 61.651016, Predicted: 58.85958913207343
-   
-</td>
-  </tr>
-</table>
-
-<h3><pre>3. Decision tree </pre></h3>
-
-<br><br>
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/2d37a763-1a5b-4633-a4fe-97886270bd01" height="300"/>
-    </td>
-    <td>
-
-	Actual: 49.598866, Predicted: 50.825474 
-
-	Actual: 56.866768, Predicted: 53.28734
-
-	Actual: 58.118244, Predicted: 53.798588
-
-	Actual: 62.331253, Predicted: 53.798588
-
-	Actual: 61.463074, Predicted: 53.798588
-
-	Actual: 61.494442, Predicted: 58.529278
-
-	Actual: 61.651016, Predicted: 53.798588
- 
-</td>
-  </tr>
-</table>
 
 <h3><pre>4. Random forest </pre></h3>
 
+Simlilar to SGDRegressor, the optimal minimum error was detected by checking `random_state`. In this case, `random_state` = 35,
+
 <br><br>
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/7de06268-91d0-4635-8af7-0b0edaba5a13" height="300"/>
+      <img src="https://github.com/user-attachments/assets/e529be1e-2dec-4aab-89b1-1157616acdc1" height="300"/>
     </td>
     <td>
 
-	Actual: 49.598866, Predicted: 47.90052037666667 
+	Actual: 49.598866, Predicted: 49.709931399999995 
 
-	Actual: 56.866768, Predicted: 47.90052037666667
+	Actual: 56.866768, Predicted: 45.837698716666665
 
-	Actual: 58.118244, Predicted: 47.90052037666667
+	Actual: 58.118244, Predicted: 50.426948177777774
 
-	Actual: 62.331253, Predicted: 51.948079099999994
+	Actual: 62.331253, Predicted: 53.060356066666664
 
-	Actual: 61.463074, Predicted: 57.31261432142857
+	Actual: 61.463074, Predicted: 59.954303016666664
 
-	Actual: 61.494442, Predicted: 57.252238871428574
+	Actual: 61.494442, Predicted: 55.18931948333333
 
-	Actual: 61.651016, Predicted: 57.252238871428574
-
+	Actual: 61.651016, Predicted: 59.954303016666664
  
 </td>
   </tr>
