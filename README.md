@@ -238,6 +238,33 @@ With the such small size, simple machine learning model like linear regression i
  <h3><pre>2. SGDRegressor </pre></h3>
 
 Our dataset was shuffle by k-fold cross validation. Therefore, the error could fluctuate slightly for each time re-run the program. 
+
+<br><br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1ed1a672-9840-432b-8d80-03a9991ec586" height="300"/>
+    </td>
+    <td>
+
+	Actual: 49.598866, Predicted: 47.92200014026671 
+      
+	Actual: 56.866768, Predicted: 48.396909509244225
+
+	Actual: 58.118244, Predicted: 51.95339062585486
+
+	Actual: 62.331253, Predicted: 54.572809678080695
+
+	Actual: 61.463074, Predicted: 58.16951602310129
+
+	Actual: 61.494442, Predicted: 58.62236298378685
+
+	Actual: 61.651016, Predicted: 58.649134441450144
+      
+</td>
+  </tr>
+</table>
+
 <br><br>
 <table>
   <tr>
@@ -290,45 +317,71 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
   </tr>
 </table>
 
+<h3><pre>3. Decision tree </pre></h3>
+
 <br><br>
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/a4f9df71-a170-41d2-ba87-73a82ae8f2a7" height="300"/>
+      <img src="https://github.com/user-attachments/assets/2d37a763-1a5b-4633-a4fe-97886270bd01" height="300"/>
     </td>
     <td>
 
-	Actual: 49.598866, Predicted: 45.55801172612378 
+	Actual: 49.598866, Predicted: 50.825474 
 
-	Actual: 56.866768, Predicted: 47.00702817317155
+	Actual: 56.866768, Predicted: 53.28734
 
-	Actual: 58.118244, Predicted: 48.73097188424087
+	Actual: 58.118244, Predicted: 53.798588
 
-	Actual: 62.331253, Predicted: 52.800342186819314
+	Actual: 62.331253, Predicted: 53.798588
 
-	Actual: 61.463074, Predicted: 54.81825252949285
+	Actual: 61.463074, Predicted: 53.798588
 
-	Actual: 61.494442, Predicted: 56.77862919019464
+	Actual: 61.494442, Predicted: 58.529278
 
-	Actual: 61.651016, Predicted: 56.88706482780992
+	Actual: 61.651016, Predicted: 53.798588
  
 </td>
   </tr>
 </table>
 
+<h3><pre>4. Random forest </pre></h3>
 
-<h3><pre>3. Decision tree </pre></h3>
+<br><br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/7de06268-91d0-4635-8af7-0b0edaba5a13" height="300"/>
+    </td>
+    <td>
 
+	Actual: 49.598866, Predicted: 47.90052037666667 
 
+	Actual: 56.866768, Predicted: 47.90052037666667
 
-**Predicting the type of crime(s) and probability of crimes based on location and time data:**
+	Actual: 58.118244, Predicted: 47.90052037666667
 
-| Prediction Model   | 	  MSE   | 
-|--------------------|----------|
-| Linear regression  | 		| 
-| SGD regression     | 	 	|
-| Decision tree      |  	| 
-| Random forest      |		|
+	Actual: 62.331253, Predicted: 51.948079099999994
+
+	Actual: 61.463074, Predicted: 57.31261432142857
+
+	Actual: 61.494442, Predicted: 57.252238871428574
+
+	Actual: 61.651016, Predicted: 57.252238871428574
+
+ 
+</td>
+  </tr>
+</table>
+
+**Metrics: **
+
+| Prediction Model   | 	  MSE  		   |  		MAE  	|  	R2 	 	 |  	RMSE 	      |
+|--------------------|---------------------|--------------------|------------------------|--------------------|
+| Linear regression  | 	10.109098055267907 | 2.6809161153726797	| 0.16473812861496662	 | 3.1794807839123522 |
+| SGD regression     | 	33.56854866281211  | 5.162919285714283	| -6.517357215776763	 | 5.7938371277429015 |	
+| Decision tree      |  29.272924702174212 | 4.829121287664962 	| -0.427902385728786	 | 5.4104458875562385 |
+| Random forest      |	73.553598263102	   | 	|
 
 
 
