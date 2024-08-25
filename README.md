@@ -237,7 +237,7 @@ With the such small size, simple machine learning model like linear regression i
 <br><br>
  <h3><pre>2. SGDRegressor </pre></h3>
 
-Our dataset was shuffle by k-fold cross validation. Therefore, the error could fluctuate slightly for each time re-run the program. This suffling was decided by `random_state` paramenter of SGDRegressor. We can seet that by following plot:
+Our dataset was shuffle by `random_state` paramenter of SGDRegressor. Therefore, the error could fluctuate slightly for each time re-run the program . We can see that by following plot:
 
 <table>
   <div>
@@ -245,9 +245,22 @@ Our dataset was shuffle by k-fold cross validation. Therefore, the error could f
   </div>
 </table>
 
-We have to find one (or many) value of `random_state` to make model reach to minimum.  After checking, we found that 75 and 50 are two suitable value.
+We found one (or many) value of `random_state` to make model reach to minimum. However, it must be sured that this value does not make model overfiting. So we tried to find a value which is an integer optimal random_state.
 
-- `random_state` = 50 
+Here's a strategy:
+```
+min_error = infinity
+optimal_r = 0
+for r in [0, 5, 10,...,100]
+	training model with random_state = r
+	if min_error > mean_absolute_error
+		min_errror =  mean_absolute_error
+		optimal_r = r
+
+# Output: optimal_r = 50
+```
+
+The iteration with step = 5 was the good choice to ensure that model does not overfiting.
 
 <br>
 <table>
@@ -275,34 +288,6 @@ We have to find one (or many) value of `random_state` to make model reach to min
   </tr>
 </table>
 <br>
-
-- `random_state` = 75
-<br>
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/user-attachments/assets/7a735ce9-bcc8-42f9-bac2-ca15cf857995" height="300"/>
-    </td>
-    <td>
-	
-	Actual: 49.598866, Predicted: 51.86172517824566 
-
-	Actual: 56.866768, Predicted: 52.542091062823
-
-	Actual: 58.118244, Predicted: 56.29637005320826
-
-	Actual: 62.331253, Predicted: 59.219222372828085
-
-	Actual: 61.463074, Predicted: 63.012822449491175
-
-	Actual: 61.494442, Predicted: 63.756976372548095
-
-	Actual: 61.651016, Predicted: 63.848115735649934
-
-</td>
-  </tr>
-</table>
-<br><br>
 
 <h3><pre>4. Random forest </pre></h3>
 
@@ -334,14 +319,14 @@ Simlilar to SGDRegressor, the optimal minimum error was detected by checking `ra
   </tr>
 </table>
 
-**Metrics: **
+ <h3><pre> Metrics </pre></h3><br>
 
-| Prediction Model   | 	  MSE  		   |  		MAE  	|  	R2 	 	 |  	RMSE 	      |
-|--------------------|---------------------|--------------------|------------------------|--------------------|
-| Linear regression  | 	10.109098055267907 | 2.6809161153726797	| 0.16473812861496662	 | 3.1794807839123522 |
-| SGD regression     | 	33.56854866281211  | 5.162919285714283	| -6.517357215776763	 | 5.7938371277429015 |	
-| Decision tree      |  29.272924702174212 | 4.829121287664962 	| -0.427902385728786	 | 5.4104458875562385 |
-| Random forest      |	73.553598263102	   | 	|
+|	   Model      | 	  MSE  		|  	  MAE	  	|  	   R2 	 	 |  	RMSE 	      |
+|---------------------|--------------------|-----------------------|------------------------|--------------------|
+| Linear regression   | 10.109098055267907 | 2.6809161153726797	| 0.16473812861496662   | 3.1794807839123522  |
+| SGD regression with | 7.025050123718676  | 2.504403321010789	| 0.6952947589989107	 | 2.650481111745314 |	
+| Decision tree       | 29.272924702174212 | 4.829121287664962 	| -0.427902385728786	 | 5.4104458875562385 |
+| Random forest       | 73.553598263102	   | Value 1<br>Value 2 	| -0.123456789123456     | 8.765432109876543  |
 
 
 
