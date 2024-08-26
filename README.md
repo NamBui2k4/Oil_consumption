@@ -327,12 +327,120 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
 |Decision Tree Regressor| 160.631|  12.204| -8.082|   18.062  |    0.339  |
 |SGDRegressor		|  42.847|   6.038| -1.422|   9.560   |    0.639  |
 
+**Choose best model to predict all country**
+
+As We saw the result above, seems that Linear Regression performed most effectiveness to predict consumption. We used it to predict all country's figure and here are result:
+
+| Country | 2024 |
+|---------|------|
+| Africa | 2398.7463560851425 |
+| Africa (EI) | 2398.7464600490175 |
+| Algeria | 240.41600024091667 |
+| Argentina | 377.6642660179845 |
+| Asia | 25136.70390328896 |
+| Asia Pacific (EI) | 21835.190430384846 |
+| Australia | 618.9428703169297 |
+| Austria | 139.7138888406289 |
+| Azerbaijan | 67.34001802296316 |
+| Bangladesh | 144.9693869165015 |
+| Belarus | 85.25233377219489 |
+| Belgium | 317.67047141783166 |
+| Brazil | 1474.0264857912546 |
+| Bulgaria | 59.261321826096825 |
+| CIS (EI) | 2618.280447848326 |
+| Canada | 1279.2888801489319 |
+| Central America (EI) | 313.3561746337289 |
+| Chile | 235.18898478713254 |
+| China | 9616.744371537556 |
+| Colombia | 280.29976921049104 |
+| Croatia | 42.596097435107886 |
+| Cyprus | 29.73746710464424 |
+| Czechia | 121.88016107869666 |
+| Denmark | 91.51470913387803 |
+| Eastern Africa (EI) | 353.79890368456734 |
+| Ecuador | 172.07675801108184 |
+| Egypt | 415.03318949911113 |
+| Estonia | 15.853866090746848 |
+| Europe | 9644.989645772277 |
+| Europe (EI) | 8677.351810730723 |
+| European Union (27) | 6524.641014260711 |
+| Finland | 97.6127469292008 |
+| France | 841.0302828660411 |
+| Germany | 1179.2807318438822 |
+| Greece | 186.48171606632516 |
+| High-income countries | 26417.972286959455 |
+| Hong Kong | 171.98767858361327 |
+| Hungary | 96.07070046908187 |
+| Iceland | 9.601569679013611 |
+| India | 3094.6975750351776 |
+| Indonesia | 847.6254542518564 |
+| Iran | 987.9652107590662 |
+| Iraq | 473.69166156791664 |
+| Ireland | 83.05535955187702 |
+| Israel | 118.80021598398336 |
+| Italy | 776.7410850200179 |
+| Japan | 2076.771213386999 |
+| Kazakhstan | 192.93610284596568 |
+| Kuwait | 213.36894047820843 |
+| Latvia | 20.121568328879977 |
+| Lithuania | 36.406914166789534 |
+| Lower-middle-income countries | 6043.129925616946 |
+| Luxembourg | 28.760865117160854 |
+| Malaysia | 534.9698129768909 |
+| Mexico | 1047.748876618457 |
+| Middle Africa (EI) | 183.3607998434819 |
+| Middle East (EI) | 5248.328812662961 |
+| Morocco | 173.0585313851887 |
+| Netherlands | 481.4975481670581 |
+| New Zealand | 89.69993687528495 |
+| Non-OECD (EI) | 31446.47709287158 |
+| North America | 12786.656753860587 |
+| North America (EI) | 12436.449125370553 |
+| North Macedonia | 11.528464657585923 |
+| Norway | 110.20767257986701 |
+| OECD (EI) | 25282.139300335555 |
+| Oceania | 721.5591026705856 |
+| Oman | 141.42044818016467 |
+| Pakistan | 196.41870056173656 |
+| Peru | 146.84350142803692 |
+| Philippines | 262.8518890423694 |
+| Poland | 395.125343435129 |
+| Portugal | 130.06985592447433 |
+| Qatar | 213.7334857047328 |
+| Romania | 130.7568550973533 |
+| Russia | 2026.0203892202198 |
+| Saudi Arabia | 1992.708335201248 |
+| Singapore | 879.496103375622 |
+| Slovakia | 51.67963456625902 |
+| Slovenia | 28.377282949072317 |
+| South Africa | 332.03980003158915 |
+| South America | 3216.6078779397544 |
+| South Korea | 1514.1188008308889 |
+| South and Central America (EI) | 3834.8162774799116 |
+| Spain | 725.0858988126645 |
+| Sri Lanka | 65.41049047970135 |
+| Sweden | 137.84564550309258 |
+| Switzerland | 135.80148267182366 |
+| Taiwan | 454.94164193266346 |
+| Thailand | 670.9475893245553 |
+| Trinidad and Tobago | 18.481960415682998 |
+| Turkey | 627.6015470658106 |
+| Turkmenistan | 95.11651196503126 |
+| USSR | 5080.9801487480145 |
+| Ukraine | 120.09577827438329 |
+| United Arab Emirates | 635.298803999659 |
+| United Kingdom | 780.1725779165615 |
+| United States | 10049.573813116005 |
+| Upper-middle-income countries | 19203.21702425719 |
+| Uzbekistan | 60.73344260093528 |
+| Venezuela | 262.24838197118396 |
+| Vietnam | 358.46136086904875 |
+| Western Africa (EI) | 500.9180172159837 |
 
 
 ## ➢ IV. Discussion
 
-**Relevance of solution**:
-- Machine Learning models are as good or as bad as the data you have. Correlation between features is important for predictions. In our case, we experienced low correlation features with our predicting variable. We experimented with different features in order to get better predictions such as using week/month/year to predict crime type based on time and using additional features such as location description, arrest. The results became better, however, not significant enough. 
+- Machine Learning models are good or bad depending on characteristic of data. Correlation between features is important for predictions. In our case, we experienced low correlation features with our predicting variable. We experimented with different features in order to get better predictions such as using week/month/year to predict crime type based on time and using additional features such as location description, arrest. The results became better, however, not significant enough. 
 
 - The original dataset was highly imbalanced. Even after dropping/merging related some crime types we still had an imbalance of 100:3. Then, we tried sampling techniques for balancing. Random Oversampling gave best results in comparison to other sampling techniques. However, the increase was comparably small. Applying combination of both undersampling and oversampling might result in better overall performance.
 
