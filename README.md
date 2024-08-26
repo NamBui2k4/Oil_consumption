@@ -327,7 +327,8 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
 |Decision Tree Regressor| 160.631|  12.204| -8.082|   18.062  |    0.339  |
 |SGDRegressor		|  42.847|   6.038| -1.422|   9.560   |    0.639  |
 
-**Choose best model to predict all country**
+<h3><pre> Choose best model to predict all country </pre></h3><br>
+
 
 As We saw the result above, seems that Linear Regression performed most effectiveness to predict consumption. We used it to predict all country's figure and here are result:
 
