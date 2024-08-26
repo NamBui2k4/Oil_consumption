@@ -205,10 +205,7 @@ Entity  Uzbekistan Uzbekistan 2 Uzbekistan 3 Uzbekistan 4 Uzbekistan 5 Uzbekista
 - test-size: 0.2
 - shape: (34, 6)
 ```
-<h3><pre>1. Linear Regression </pre></h3>
-<br>
-With the such small size, simple machine learning model like linear regression is suitble.
-<br><br>
+<h3><pre>1. Linear Regression </pre></h3><br>
 
 <table>
   <tr>
@@ -235,85 +232,87 @@ With the such small size, simple machine learning model like linear regression i
   </tr>
 </table>
 <br><br>
- <h3><pre>2. SGDRegressor </pre></h3>
 
-Our dataset was shuffle by `random_state` paramenter of SGDRegressor. Therefore, the error could fluctuate slightly for each time re-run the program . We can see that by following plot:
-
-<table>
-  <div>
-    <td><img src="https://github.com/user-attachments/assets/e54b536e-79b1-45ee-9ff0-45ec8f098009"/></td>
-  </div>
-</table>
-
-We found one (or many) value of `random_state` to make model reach to minimum. However, it must be sured that this value does not make model overfiting. So we tried to find a value which is an integer optimal random_state.
-
-Here's a strategy:
-```
-min_error = infinity
-optimal_r = 0
-for r in [0, 5, 10,...,100]
-	training model with random_state = r
-	if min_error > mean_absolute_error
-		min_errror =  mean_absolute_error
-		optimal_r = r
-
-# Output: optimal_r = 50
-```
-
-The iteration with step = 5 was the good choice to ensure that model does not overfiting.
-
-<br>
+ <h3><pre>2. SGDRegressor </pre></h3><br>
+ 
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/223f043d-69ad-4177-9412-3220b4a0e41b" height="300"/>
+      <img src="https://github.com/user-attachments/assets/f82606ec-3371-4cb5-8087-5c9eef2bb80c" height="300"/>
     </td>
     <td>
-	
-	Actual: 49.598866, Predicted: 51.80179601036876 
+	    
+         Actual: 49.598866, Predicted: 46.722316536756836 
 
-	Actual: 56.866768, Predicted: 51.96274671319636
+         Actual: 56.866768, Predicted: 47.30630238087184
 
-	Actual: 58.118244, Predicted: 55.81865477490301
+         Actual: 58.118244, Predicted: 50.477292594681494
 
-	Actual: 62.331253, Predicted: 58.46993676615634
+         Actual: 62.331253, Predicted: 53.10352718552769
 
-	Actual: 61.463074, Predicted: 62.39474754077266
+         Actual: 61.463074, Predicted: 56.476213710381785
 
-	Actual: 61.494442, Predicted: 62.953854342446455
+         Actual: 61.494442, Predicted: 57.37724028267572
 
-	Actual: 61.651016, Predicted: 63.36142417596551
+         Actual: 61.651016, Predicted: 57.79154287956481
+
 
 </td>
   </tr>
 </table>
 <br>
 
-<h3><pre>4. Random forest </pre></h3>
+<h3><pre>3. Decision Tree </pre></h3><br>
 
-Simlilar to SGDRegressor, the optimal minimum error was detected by checking `random_state`. In this case, `random_state` = 35,
+<br>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2f2436bf-9281-4c8f-a22a-b826b8514d60" height="300"/>
+    </td>
+    <td>
+	    
+         Actual: 49.598866, Predicted: 44.268963 
+
+         Actual: 56.866768, Predicted: 44.268963
+
+         Actual: 58.118244, Predicted: 45.62668
+
+         Actual: 62.331253, Predicted: 44.268963
+
+         Actual: 61.463074, Predicted: 49.220936
+
+         Actual: 61.494442, Predicted: 49.220936
+
+         Actual: 61.651016, Predicted: 49.220936
+
+</td>
+  </tr>
+</table><br>
+
+<h3><pre>4. Random forest </pre></h3>
 
 <br><br>
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/e529be1e-2dec-4aab-89b1-1157616acdc1" height="300"/>
+      <img src="https://github.com/user-attachments/assets/ce357e35-a074-47df-a537-6027af6dd6e8" height="300"/>
     </td>
     <td>
 
-	Actual: 49.598866, Predicted: 49.709931399999995 
+         Actual: 49.598866, Predicted: 48.74836252820513 
 
-	Actual: 56.866768, Predicted: 45.837698716666665
+         Actual: 56.866768, Predicted: 48.74836252820513
 
-	Actual: 58.118244, Predicted: 50.426948177777774
+         Actual: 58.118244, Predicted: 51.3976141948718
 
-	Actual: 62.331253, Predicted: 53.060356066666664
+         Actual: 62.331253, Predicted: 51.3976141948718
 
-	Actual: 61.463074, Predicted: 59.954303016666664
+         Actual: 61.463074, Predicted: 56.13808456666667
 
-	Actual: 61.494442, Predicted: 55.18931948333333
+         Actual: 61.494442, Predicted: 56.13808456666667
 
-	Actual: 61.651016, Predicted: 59.954303016666664
+         Actual: 61.651016, Predicted: 56.13808456666667
  
 </td>
   </tr>
@@ -321,12 +320,13 @@ Simlilar to SGDRegressor, the optimal minimum error was detected by checking `ra
 
  <h3><pre> Metrics </pre></h3><br>
 
-|	   Model      | 	  MSE  		|  	  MAE	  	|  	   R2 	 	 |  	RMSE 	      |
-|---------------------|--------------------|-----------------------|------------------------|--------------------|
-| Linear regression   | 10.109098055267907 | 2.6809161153726797	| 0.16473812861496662   | 3.1794807839123522  |
-| SGD regression with | 7.025050123718676  | 2.504403321010789	| 0.6952947589989107	 | 2.650481111745314 |	
-| Decision tree       | 29.272924702174212 | 4.829121287664962 	| -0.427902385728786	 | 5.4104458875562385 |
-| Random forest       | 73.553598263102	   | Value 1<br>Value 2 	| -0.123456789123456     | 8.765432109876543  |
+|   Model        	|   MSE  |   MAE  |   R2  | Max error | variance  | 
+|----------------	|--------|--------|-------|-----------|-----------| 
+|LinearRegression	| 10.109 |  2.681 | 0.428 |   5.322   |    0.548  |
+|Random Forest Regressor|  45.540|   6.117| -1.575|   10.934  |    0.541  |
+|Decision Tree Regressor| 160.631|  12.204| -8.082|   18.062  |    0.339  |
+|SGDRegressor		|  42.847|   6.038| -1.422|   9.560   |    0.639  |
+
 
 
 
