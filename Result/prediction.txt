@@ -1,11 +1,79 @@
-Predicted: [2058.34203152], Actual: 2122.528 
-Predicted: [2201.74767519], Actual: 2144.3142 
-Predicted: [2188.68258893], Actual: 2202.6306 
-Predicted: [2244.20774204], Actual: 2221.6062 
-Predicted: [2286.61299055], Actual: 2265.2363 
-Predicted: [2308.11479105], Actual: 2299.4292 
-Predicted: [2359.07998721], Actual: 2295.1206 
-Predicted: [2352.5291346], Actual: 2055.2783 
-Predicted: [2142.38019501], Actual: 2242.3945 
-Predicted: [2211.65210444], Actual: 2361.337 
-Predicted: [2486.21807314], Actual: 2358.9668 
+| Country | 2024 |
+|---------|------|
+| Algeria | 240.416 |
+| Argentina | 377.664 |
+| Austria | 139.714 |
+| Azerbaijan | 67.340 |
+| Bangladesh | 144.969 |
+| Belarus | 85.252 |
+| Belgium | 317.670 |
+| Brazil | 1474.026 |
+| Bulgaria | 59.261 |
+| Canada | 1279.289 |
+| Chile | 235.189 |
+| China | 9616.744 |
+| Colombia | 280.300 |
+| Croatia | 42.596 |
+| Cyprus | 29.737 |
+| Czechia | 121.880 |
+| Denmark | 91.515 |
+| Ecuador | 172.077 |
+| Egypt | 415.033 |
+| Estonia | 15.854 |
+| Finland | 97.613 |
+| France | 841.030 |
+| Germany | 1179.281 |
+| Greece | 186.482 |
+| Hong Kong | 171.988 |
+| Hungary | 96.071 |
+| Iceland | 9.602 |
+| India | 3094.698 |
+| Indonesia | 847.625 |
+| Iran | 987.965 |
+| Iraq | 473.692 |
+| Ireland | 83.055 |
+| Israel | 118.800 |
+| Italy | 776.741 |
+| Japan | 2076.771 |
+| Kazakhstan | 192.936 |
+| Kuwait | 213.369 |
+| Latvia | 20.122 |
+| Lithuania | 36.407 |
+| Luxembourg | 28.761 |
+| Malaysia | 534.970 |
+| Mexico | 1047.749 |
+| Morocco | 173.059 |
+| Netherlands | 481.498 |
+| New Zealand | 89.700 |
+| North Macedonia | 11.528 |
+| Norway | 110.208 |
+| Oman | 141.420 |
+| Pakistan | 196.419 |
+| Peru | 146.844 |
+| Philippines | 262.852 |
+| Poland | 395.125 |
+| Portugal | 130.070 |
+| Qatar | 213.733 |
+| Romania | 130.757 |
+| Russia | 2026.020 |
+| Saudi Arabia | 1992.708 |
+| Singapore | 879.496 |
+| Slovakia | 51.680 |
+| Slovenia | 28.377 |
+| South Korea | 1514.119 |
+| Spain | 725.086 |
+| Sri Lanka | 65.410 |
+| Sweden | 137.846 |
+| Switzerland | 135.801 |
+| Taiwan | 454.942 |
+| Thailand | 670.948 |
+| Trinidad and Tobago | 18.482 |
+| Turkey | 627.602 |
+| Turkmenistan | 95.117 |
+| Ukraine | 120.096 |
+| United Arab Emirates | 635.299 |
+| United Kingdom | 780.173 |
+| United States | 10049.574 |
+| Uzbekistan | 60.733 |
+| Venezuela | 262.248 |
+| Vietnam | 358.461 |
