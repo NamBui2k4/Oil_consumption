@@ -1,4 +1,4 @@
-# Machine learning: Analyzing and Creating model for Oil consumption in many countries
+# Machine learning: Analyzing and Predicting Oil consumption in many countries
 
 - Author: NamBui
 - Prefrence style: [Vaibhav3M](https://github.com/Vaibhav3M/Chicago-crime-analysis)
