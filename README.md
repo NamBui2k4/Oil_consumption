@@ -415,9 +415,7 @@ As We saw the result above, seems that Linear Regression performed most effectiv
 <!--
 ## ➢ IV. Discussion
 
-
-
-- Machine Learning models are good or bad depending on characteristic of data. If the data was not sufficiently hughe enough, using esemble model could not perform significantly effecient. 
+- Machine Learning models are good or bad depending on characteristic of data. If the data was not sufficiently hughe enough, using esemble model could not perform high effecient. Instead, using liear regression are more suitable
 
 - The original dataset was highly imbalanced. Even after dropping/merging related some crime types we still had an imbalance of 100:3. Then, we tried sampling techniques for balancing. Random Oversampling gave best results in comparison to other sampling techniques. However, the increase was comparably small. Applying combination of both undersampling and oversampling might result in better overall performance.
 
